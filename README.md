@@ -19,33 +19,33 @@ Fuzzy Pop is super simple. You give it an `input` string and an `array` of value
 var fp = require('fuzzy-pop'),
   array = [{
     value: 'foo',
-    count: 1,
-    latest: new Date(100)
+    count: 30,
+    latest: new Date('2015-01-02')
   }, {
     value: 'foobar',
-    count: 5,
-    latest: new Date(200)
+    count: 50,
+    latest: new Date('2015-05-01')
   }, {
     value: 'foobarbaz',
-    count: 1,
-    latest: new Date(300)
+    count: 10,
+    latest: new Date('2015-05-02')
   }];
 
 fp('foo', array);
 
 /* returns:
   [ { value: 'foobar',
-      count: 5,
-      latest: Wed Dec 31 1969 19:00:00 GMT-0500 (EST),
-      score: 3.3367718175684676e-10 },
-    { value: 'foo',
-      count: 1,
-      latest: Wed Dec 31 1969 19:00:00 GMT-0500 (EST),
-      score: 0 },
+      count: 50,
+      latest: Thu Apr 30 2015 20:00:00 GMT-0400 (EDT),
+      score: 0.008991589643452504 },
     { value: 'foobarbaz',
-      count: 1,
-      latest: Wed Dec 31 1969 19:00:00 GMT-0500 (EST),
-      score: 0 } ]
+      count: 10,
+      latest: Fri May 01 2015 20:00:00 GMT-0400 (EDT),
+      score: 0.0024766818556312426 },
+    { value: 'foo',
+      count: 30,
+      latest: Thu Jan 01 2015 19:00:00 GMT-0500 (EST),
+      score: 0.00001622207651379491 } ]
 */
 ```
 

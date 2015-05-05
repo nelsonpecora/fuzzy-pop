@@ -32,4 +32,25 @@ describe('Fuzzy Pop', function () {
 
     expect(_.pluck(filtered, 'value')).to.eql(expectedArr);
   });
+
+  it('should decay things', function () {
+    var input = 'foo',
+      arr = [{
+        value: 'foo',
+        count: 30,
+        latest: new Date('2015-01-02')
+      }, {
+        value: 'foobar',
+        count: 50,
+        latest: new Date('2015-05-01')
+      }, {
+        value: 'foobarbaz',
+        count: 10,
+        latest: new Date('2015-05-02')
+      }],
+      filtered = fp(input, arr),
+      expectedArr = ['foobar', 'foobarbaz', 'foo'];
+
+    expect(_.pluck(filtered, 'value')).to.eql(expectedArr);
+  });
 });
