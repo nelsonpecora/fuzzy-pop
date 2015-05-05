@@ -22,6 +22,10 @@ var fp = require('fuzzy-pop'),
     count: 30,
     latest: new Date('2015-01-02')
   }, {
+    value: 'bar',
+    count: 100,
+    latest: new Date('2015-01-01')
+  }, {
     value: 'foobar',
     count: 50,
     latest: new Date('2015-05-01')
@@ -46,6 +50,8 @@ fp('foo', array);
       count: 30,
       latest: Thu Jan 01 2015 19:00:00 GMT-0500 (EST),
       score: 0.00001622207651379491 } ]
+
+  note: 'bar' isn't returned because it doesn't match! (⌐■_■)
 */
 ```
 

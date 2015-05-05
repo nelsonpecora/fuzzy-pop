@@ -40,6 +40,10 @@ describe('Fuzzy Pop', function () {
         count: 30,
         latest: new Date('2015-01-02')
       }, {
+        value: 'bar',
+        count: 100,
+        latest: new Date('2015-01-01')
+      }, {
         value: 'foobar',
         count: 50,
         latest: new Date('2015-05-01')
