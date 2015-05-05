@@ -1,6 +1,6 @@
 {
   "name": "fuzzy-pop",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple fuzzy search + popularity",
   "main": "index.js",
   "dependencies": {
