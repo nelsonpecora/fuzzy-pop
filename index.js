@@ -7,7 +7,7 @@ var f = require('fuzzy').filter,
  * fuzzy match an input string in an array of items
  * return the matching items in order of popularity
  * @param  {string} input
- * @param  {array} items array of objects w/ { text: string, count: number, latest: date }
+ * @param  {array} items array of objects w/ { value: string, count: number, latest: date }
  * @return {array}       array of the matched objects
  */
 module.exports = function (input, items) {
@@ -21,7 +21,7 @@ module.exports = function (input, items) {
   });
 
   // then, filter the array with fuzzy matching
-  filtered = _.pluck(f(input, scores, { extract: function (tag) { return tag.text; }}), 'original');
+  filtered = _.pluck(f(input, scores, { extract: function (item) { return item.value; }}), 'original');
 
   // finally, sort by the popularity
   weighted = _.sortByOrder(filtered, 'score', false);
