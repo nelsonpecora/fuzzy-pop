@@ -1,0 +1,35 @@
+{
+  "name": "fuzzy-pop",
+  "version": "1.0.0",
+  "description": "Simple fuzzy search + popularity",
+  "main": "index.js",
+  "dependencies": {
+    "decay": "^1.0.8",
+    "fuzzy": "^0.1.0",
+    "lodash": "^3.8.0"
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "mocha": "^2.2.4"
+  },
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yoshokatana/fuzzy-pop.git"
+  },
+  "keywords": [
+    "fuzzy",
+    "search",
+    "hackernews",
+    "popularity",
+    "autocomplete"
+  ],
+  "author": "Nelson Pecora",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoshokatana/fuzzy-pop/issues"
+  },
+  "homepage": "https://github.com/yoshokatana/fuzzy-pop"
+}
