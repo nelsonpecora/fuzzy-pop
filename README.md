@@ -1,5 +1,7 @@
 # fuzzy-pop
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/nelsonpecora/fuzzy-pop.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/yoshokatana/fuzzy-pop.svg)](https://travis-ci.org/yoshokatana/fuzzy-pop)
 [![Code Climate](https://codeclimate.com/github/yoshokatana/fuzzy-pop/badges/gpa.svg)](https://codeclimate.com/github/yoshokatana/fuzzy-pop)
 

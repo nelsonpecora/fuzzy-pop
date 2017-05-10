@@ -15,16 +15,16 @@ module.exports = function (input, items) {
 
   // first, calculate the scores using the hackernews algorithm
   // todo: memoize this?
-  scores = _.forEach(items, function (item) {
+  scores = _.map(items, function (item) {
     item.score = hn(item.count, item.latest);
     return item;
   });
 
   // then, filter the array with fuzzy matching
-  filtered = _.pluck(f(input, scores, { extract: function (item) { return item.value; }}), 'original');
+  filtered = _.map(f(input, scores, { extract: function (item) { return item.value; }}), 'original');
 
   // finally, sort by the popularity
-  weighted = _.sortByOrder(filtered, 'score', false);
+  weighted = _.orderBy(filtered, 'score', 'desc');
 
   return weighted;
 };
