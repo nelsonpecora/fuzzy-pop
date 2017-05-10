@@ -4,18 +4,6 @@ var fp = require('./index'),
   _ = require('lodash');
 
 describe('Fuzzy Pop', function () {
-  it('should throw error if no second arg passed through', function () {
-    expect(fp).to.throw(Error);
-  });
-
-  it('should throw error if array objects don\'t have required properties', function () {
-    expect(fp).to.throw(Error);
-  });
-
-  it('should throw error if first arg isn\'t string', function () {
-    expect(fp).to.throw(Error);
-  });
-
   it('should find a string in an array', function () {
     var input = 'foo',
       arr = [{
@@ -30,7 +18,7 @@ describe('Fuzzy Pop', function () {
       filtered = fp(input, arr),
       expectedArr = ['foobar', 'foo'];
 
-    expect(_.pluck(filtered, 'value')).to.eql(expectedArr);
+    expect(_.map(filtered, 'value')).to.eql(expectedArr);
   });
 
   it('should decay things', function () {
@@ -53,8 +41,8 @@ describe('Fuzzy Pop', function () {
         latest: new Date('2015-05-02')
       }],
       filtered = fp(input, arr),
-      expectedArr = ['foobar', 'foobarbaz', 'foo'];
+      expectedArr = ['foobar', 'foo', 'foobarbaz'];
 
-    expect(_.pluck(filtered, 'value')).to.eql(expectedArr);
+    expect(_.map(filtered, 'value')).to.eql(expectedArr);
   });
 });
