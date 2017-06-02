@@ -9,7 +9,7 @@
     "lodash": "^4.17.4"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
+    "chai": "^4.0.1",
     "mocha": "^3.4.1"
   },
   "scripts": {
