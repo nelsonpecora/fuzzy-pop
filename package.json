@@ -6,7 +6,7 @@
   "dependencies": {
     "decay": "^1.0.8",
     "fuzzy": "^0.1.0",
-    "lodash": "^4.17.4"
+    "lodash": "^4.17.11"
   },
   "devDependencies": {
     "chai": "^4.0.1",
